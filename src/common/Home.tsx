@@ -37,12 +37,12 @@ export const Home = ({ servers }: HomeProps) => {
           </div>
           <div className="col-md-7 home__servers-container">
             <div className="home__title-wrapper">
-              <h1 className="home__title">Welcome!</h1>
+              <h1 className="home__title">Welcome to The Antitwink™'s Shlink server!</h1>
             </div>
             <ServersListGroup embedded servers={serversList}>
               {!hasServers && (
                 <div className="p-4 text-center">
-                  <p className="mb-5">This application will help you manage your Shlink servers.</p>
+                  <p className="mb-5">This application will help you manage your Antitwink™ Shlink servers.</p>
                   <p>
                     <Link to="/server/create" className="btn btn-outline-primary btn-lg me-2">
                       <FontAwesomeIcon icon={faPlus} /> <span className="ms-1">Add a server</span>

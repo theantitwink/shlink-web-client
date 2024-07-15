@@ -65,12 +65,12 @@ const CreateServer: FCWithDeps<CreateServerProps, CreateServerDeps> = ({ servers
 
   return (
     <NoMenuLayout>
-      <ServerForm title={<h5 className="mb-0">Add new server</h5>} onSubmit={setServerData}>
+      <ServerForm title={<h5 className="mb-0">Add new credentials</h5>} onSubmit={setServerData}>
         {!hasServers && (
           <ImportServersBtn tooltipPlacement="top" onImport={setServersImported} onImportError={setErrorImporting} />
         )}
         {hasServers && <Button outline onClick={goBack}>Cancel</Button>}
-        <Button outline color="primary" className="ms-2">Create server</Button>
+        <Button outline color="primary" className="ms-2">Add credentials</Button>
       </ServerForm>
 
       {serversImported && <ImportResult type="success" />}

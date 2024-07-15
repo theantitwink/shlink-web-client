@@ -31,7 +31,7 @@ export const Home = ({ servers }: HomeProps) => {
           <div className="col-md-5 d-none d-md-block">
             <div className="home__logo-wrapper">
               <div className="home__logo">
-                <ShlinkLogo />
+                <ShlinkLogo height={512} />
               </div>
             </div>
           </div>

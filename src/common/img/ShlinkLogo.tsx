@@ -3,11 +3,12 @@ import { MAIN_COLOR } from '@shlinkio/shlink-frontend-kit';
 export interface ShlinkLogoProps {
   color?: string;
   className?: string;
+  height?: number;
 }
 
-export const ShlinkLogo = ({ color = MAIN_COLOR, className }: ShlinkLogoProps) => (
+export const ShlinkLogo = ({ color = MAIN_COLOR, className, height = 24 }: ShlinkLogoProps) => (
   <div className={`${className}`}>
-    <img src="/icons/icon-1024x1024.png" alt="Bulging Outline Image" />
+    <img src={`/icons/icon-${height}x${height}.png`} alt="My-Short.link" />
   </div>
 );
 

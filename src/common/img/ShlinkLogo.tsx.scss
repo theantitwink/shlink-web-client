@@ -1,0 +1,49 @@
+
+
+/* styles.css */
+@keyframes bulge-effect-1 {
+  0%, 100% {
+    transform: scale(1);
+    filter: url(#bulge);
+  }
+  50% {
+    transform: scale(1.1);
+    filter: url(#bulge);
+  }
+}
+
+@keyframes bulge-effect-2 {
+  0%, 100% {
+    transform: scale(1);
+    filter: url(#bulge);
+  }
+  25%, 75% {
+    transform: scale(1.1);
+    filter: url(#bulge);
+  }
+}
+
+.bulge-container {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.bulge-image {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px; /* Adjust as needed */
+}
+
+.first-image {
+  animation: bulge-effect-1 2s infinite;
+}
+
+.second-image {
+  animation: bulge-effect-2 2s infinite;
+  width: 250px;
+}

@@ -5,7 +5,7 @@ import { clsx } from 'clsx';
 import type { FC } from 'react';
 import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
+import { Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink} from 'reactstrap';
 import type { FCWithDeps } from '../container/utils';
 import { componentFactory, useDependencies } from '../container/utils';
 import { ShlinkLogo } from './img/ShlinkLogo';
@@ -30,7 +30,8 @@ const MainHeader: FCWithDeps<{}, MainHeaderDeps> = () => {
   return (
     <Navbar color="primary" dark fixed="top" className="main-header" expand="md">
       <NavbarBrand tag={Link} to="/">
-        <ShlinkLogo className="main-header__brand-logo" color="white" height={24} />The Antitwink™'s Shortlinks!
+        <ShlinkLogo className="main-header__brand-logo" color="white" height={24} />
+        <span style={{display: 'inline'}}>The Antitwink™'s Shortlinks!</span>
       </NavbarBrand>
 
       <NavbarToggler onClick={toggleCollapse}>

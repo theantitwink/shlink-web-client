@@ -45,7 +45,7 @@ export const Home = ({ servers }: HomeProps) => {
                   <p className="mb-5">This application will help you manage your Antitwink™ Shlink servers.</p>
                   <p>
                     <Link to="/server/create" className="btn btn-outline-primary btn-lg me-2">
-                      <FontAwesomeIcon icon={faPlus} /> <span className="ms-1">Add a server</span>
+                      <FontAwesomeIcon icon={faPlus} /> <span className="ms-1">Add your credentials</span>
                     </Link>
                   </p>
                   <p className="mb-0 mt-5">

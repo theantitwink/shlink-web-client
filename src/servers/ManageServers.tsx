@@ -55,13 +55,13 @@ const ManageServers: FCWithDeps<ManageServersProps, ManageServersDeps> = ({ serv
           <ImportServersBtn className="flex-fill" onImportError={setErrorImporting}>Import servers</ImportServersBtn>
           {allServers.length > 0 && (
             <Button outline className="ms-2 flex-fill" onClick={async () => serversExporter.exportServers()}>
-              <FontAwesomeIcon icon={exportIcon} fixedWidth /> Export servers
+              <FontAwesomeIcon icon={exportIcon} fixedWidth /> Export credentials
             </Button>
           )}
         </div>
         <div className="col-md-6 text-md-end d-flex d-md-block">
           <Button outline color="primary" className="flex-fill" tag={Link} to="/server/create">
-            <FontAwesomeIcon icon={plusIcon} fixedWidth /> Add a server
+            <FontAwesomeIcon icon={plusIcon} fixedWidth /> Add your credentials
           </Button>
         </div>
       </Row>
@@ -77,7 +77,7 @@ const ManageServers: FCWithDeps<ManageServersProps, ManageServersDeps> = ({ serv
             </tr>
           </thead>
           <tbody>
-            {!serversList.length && <tr className="text-center"><td colSpan={4}>No servers found.</td></tr>}
+            {!serversList.length && <tr className="text-center"><td colSpan={4}>No credentials found.</td></tr>}
             {serversList.map((server) => (
               <ManageServersRow key={server.id} server={server} hasAutoConnect={hasAutoConnect} />
             ))}

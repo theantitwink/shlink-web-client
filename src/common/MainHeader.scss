@@ -9,6 +9,14 @@
   }
 }
 
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+.main-header__brand-logo {
+  margin-right: 5px; /* Optional spacing between logo and text */
+}
+
 .main-header__brand-logo {
   width: 26px;
   margin-right: 5px;

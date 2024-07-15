@@ -7,7 +7,7 @@ export interface ShlinkLogoProps {
 }
 
 export const ShlinkLogo = ({ color = MAIN_COLOR, className, height = 24 }: ShlinkLogoProps) => (
-  <div className={`${className}`}>
+  <div className={`${className}`} style={{display: 'inline-block'}}>
     <img src={`/icons/icon-${height}x${height}.png`} alt="My-Short.link" />
   </div>
 );

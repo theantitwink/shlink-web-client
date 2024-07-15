@@ -36,7 +36,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 300px; /* Adjust as needed */
+  width: 100%; /* Adjust as needed */
 }
 
 .first-image {
@@ -45,5 +45,5 @@
 
 .second-image {
   animation: bulge-effect-2 2s infinite;
-  width: 250px;
+  width: 2.50em;
 }

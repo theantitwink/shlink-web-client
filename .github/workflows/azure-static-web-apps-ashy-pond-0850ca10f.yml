@@ -1,4 +1,4 @@
-name: shlink web client continuous deployment
+name: my-short-link-client continuous deployment
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
       - develop
 
 concurrency:
-  group: shlink-web-client
+  group: my-short-link-client
   cancel-in-progress: true
 
 jobs:

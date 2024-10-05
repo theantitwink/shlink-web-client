@@ -15,7 +15,10 @@ export default defineConfig({
     filename: 'service-worker.ts',
     injectRegister: false,
     manifestFilename: 'manifest.json',
-    manifest,
+    manifest, 
+    injectManifest: {
+      maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5 MiB
+    }
   })],
   build: {
     outDir: 'build',

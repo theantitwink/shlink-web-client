@@ -3,10 +3,9 @@ updates:
   - package-ecosystem: npm
     directory: '/'
     schedule:
-      interval: weekly
-      day: saturday
+      interval: daily
       time: '09:00'
-      timezone: 'Europe/Madrid'
+      timezone: 'EST5EDT'
     open-pull-requests-limit: 10
     groups:
       fontawesome:
@@ -44,7 +43,6 @@ updates:
   - package-ecosystem: docker
     directory: '/'
     schedule:
-      interval: weekly
-      day: saturday
+      interval: daily
       time: '09:00'
-      timezone: 'Europe/Madrid'
+      timezone: 'EST5EDT'

@@ -27,7 +27,7 @@ export const ServerForm: FC<ServerFormProps> = ({ onSubmit, initialValues, child
       <SimpleCard className="mb-3" title={title}>
         <InputFormGroup value={name} onChange={setName}>Name</InputFormGroup>
         <InputFormGroup type="url" value={url} onChange={setUrl}>Server URL</InputFormGroup>
-        <InputFormGroup value={apiKey} onChange={setApiKey}>API key</InputFormGroup>
+        <InputFormGroup value={apiKey} onChange={setApiKey} type="password">API key</InputFormGroup>
       </SimpleCard>
 
       <div className="text-end">{children}</div>

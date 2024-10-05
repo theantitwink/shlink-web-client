@@ -1,4 +1,4 @@
-name: shlink web client continuous deployment
+name: shlink web client continuous deployment (old)
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
       - develop
 
 concurrency:
-  group: shlink-web-client
+  group: ${{ github.workflow }}
   cancel-in-progress: true
 
 jobs:

@@ -2,10 +2,10 @@
   "name": "shlink-web-client",
   "description": "A React-based progressive web application for shlink",
   "private": false,
-  "homepage": "",
-  "repository": "https://github.com/shlinkio/shlink-web-client",
+  "repository": "https://github.com/iamtheantitwink/shlink-web-client",
   "license": "MIT",
   "type": "module",
+  "version": "v0.0.2",
   "scripts": {
     "lint": "npm run lint:css && npm run lint:js",
     "lint:css": "stylelint src/*.scss src/**/*.scss",
@@ -24,6 +24,7 @@
     "test:verbose": "npm run test -- --verbose"
   },
   "dependencies": {
+    "@eslint-community/eslint-utils": "^4.4.0",
     "@fortawesome/fontawesome-free": "^6.6.0",
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
@@ -36,7 +37,7 @@
     "@shlinkio/shlink-frontend-kit": "^0.5.3",
     "@shlinkio/shlink-js-sdk": "^1.2.0",
     "@shlinkio/shlink-web-component": "^0.7.0",
-    "bootstrap": "5.2.3",
+    "bootstrap": "^5.2.3",
     "bottlejs": "^2.0.1",
     "clsx": "^2.1.1",
     "compare-versions": "^6.1.1",
@@ -64,15 +65,16 @@
     "@testing-library/react": "^16.0.1",
     "@testing-library/user-event": "^14.5.2",
     "@total-typescript/shoehorn": "^0.1.2",
+    "@types/node": "^22.7.4",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.0",
     "@types/uuid": "^10.0.0",
     "@vitejs/plugin-react": "^4.3.2",
     "@vitest/coverage-v8": "^2.1.2",
-    "axe-core": "^4.10.0",
     "adm-zip": "^0.5.16",
+    "axe-core": "^4.10.0",
     "chalk": "^5.3.0",
-    "eslint": "^9.12.0",
+    "eslint": "^8.57.1",
     "eslint-plugin-jsx-a11y": "^6.10.0",
     "eslint-plugin-react": "^7.37.1",
     "eslint-plugin-react-hooks": "^4.6.2",
@@ -85,7 +87,7 @@
     "typescript-eslint": "^8.8.0",
     "vite": "^5.4.8",
     "vite-plugin-pwa": "^0.20.5",
-    "vitest": "^2.0.2"
+    "vitest": "^2.1.2"
   },
   "browserslist": [
     ">0.2%",

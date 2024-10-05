@@ -7,7 +7,7 @@ on:
       - develop
 
 concurrency:
-  group: shlink-web-client
+  group: ${{ github.workflow }}
   cancel-in-progress: true
 
 jobs:
@@ -17,20 +17,31 @@ jobs:
         steps:
             - name: Checkout code
               uses: actions/checkout@v2
+              with:
+                fetch-depth: 0
     
+            - name: MinVer
+              id: minver
+              uses: theantitwink/minver@main
+
+            - name: Update package version
+              uses: theantitwink/update-package-version@main
+              with:
+                version: ${{ steps.minver.outputs.version }}
+
             - name: Setup Node.js
               uses: actions/setup-node@v2
               with:
-                node-version: '20'
+                node-version: '22'
     
             - name: Install dependencies
-              run: npm ci
+              run: npm install --force
     
             - name: Build
               run: npm run build
     
             - name: Build And Deploy
-              id: builddeploy
+              id: deploy
               uses: Azure/static-web-apps-deploy@v1
               with:
                 azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_GRAY_SKY_012BE680F }}
@@ -42,7 +53,8 @@ jobs:
                 api_location: "" # Api source code path - optional
                 output_location: "build" # Built app content directory - optional
                 ###### End of Repository/Build Configurations ######
+                skip_app_build: true
 
         environment:
           name: gray-sky
-          url: ${{ steps.deploy.outputs.static_site_url }}
+          url: ${{ steps.deploy.outputs.static_web_app_url }}

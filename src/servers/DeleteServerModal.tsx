@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 import type { FC } from 'react';
 import { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 import { Message } from '@shlinkio/shlink-frontend-kit';
 import type { FC } from 'react';
 import { useEffect } from 'react';
@@ -17,7 +18,7 @@ type WithSelectedServerPropsDeps = {
   ServerError: FC;
 };
 
-export function withSelectedServer<T = {}>(
+export function withSelectedServer<T = any>(
   WrappedComponent: FCWithDeps<WithSelectedServerProps & T, WithSelectedServerPropsDeps>,
 ) {
   const ComponentWrapper: FCWithDeps<WithSelectedServerProps & T, WithSelectedServerPropsDeps> = (props) => {

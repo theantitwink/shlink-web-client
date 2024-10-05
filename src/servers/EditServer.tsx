@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 import type { FC } from 'react';
 import { Button } from 'reactstrap';
 import { NoMenuLayout } from '../common/NoMenuLayout';

@@ -12,7 +12,7 @@ body:
     attributes:
       label: How do you use shlink-web-client
       options:
-        - https://app.shlink.io
+        - https://my-short.link
         - Docker image
         - Self-hosted
         - Other (explain in summary)
@@ -21,4 +21,4 @@ body:
       required: true
     attributes:
       label: Summary
-      value: '<!-- Describe your issue, question or request here. -->'
+      value: "<!-- Describe your issue, question or request here. -->"

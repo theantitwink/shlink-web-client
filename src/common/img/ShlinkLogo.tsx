@@ -1,4 +1,3 @@
-import { MAIN_COLOR } from '@shlinkio/shlink-frontend-kit';
 
 export interface ShlinkLogoProps {
   color?: string;
@@ -6,8 +5,8 @@ export interface ShlinkLogoProps {
   height?: number;
 }
 
-export const ShlinkLogo = ({ color = MAIN_COLOR, className, height = 24 }: ShlinkLogoProps) => (
-  <div className={`${className}`} style={{display: 'inline-block'}}>
+export const ShlinkLogo = ({ className, height = 24 }: ShlinkLogoProps) => (
+  <div className={`${className}`} style={{ display: 'inline-block' }}>
     <img src={`/icons/icon-${height}x${height}.png`} alt="My-Short.link" style={{ borderRadius: '15px', boxShadow: '0 0 15px rgba(0, 0, 0, 0.5)' }} />
   </div>
 );

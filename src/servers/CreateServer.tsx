@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 import type { TimeoutToggle } from '@shlinkio/shlink-frontend-kit';
 import { Result, useToggle } from '@shlinkio/shlink-frontend-kit';
 import type { FC } from 'react';

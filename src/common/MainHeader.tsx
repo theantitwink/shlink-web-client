@@ -5,7 +5,7 @@ import { clsx } from 'clsx';
 import type { FC } from 'react';
 import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink} from 'reactstrap';
+import { Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
 import type { FCWithDeps } from '../container/utils';
 import { componentFactory, useDependencies } from '../container/utils';
 import { ShlinkLogo } from './img/ShlinkLogo';
@@ -15,7 +15,7 @@ type MainHeaderDeps = {
   ServersDropdown: FC;
 };
 
-const MainHeader: FCWithDeps<{}, MainHeaderDeps> = () => {
+const MainHeader: FCWithDeps<any, MainHeaderDeps> = () => {
   const { ServersDropdown } = useDependencies(MainHeader);
   const [isNotCollapsed, toggleCollapse, , collapse] = useToggle();
   const location = useLocation();
@@ -31,7 +31,7 @@ const MainHeader: FCWithDeps<{}, MainHeaderDeps> = () => {
     <Navbar color="primary" dark fixed="top" className="main-header" expand="md">
       <NavbarBrand tag={Link} to="/">
         <ShlinkLogo className="main-header__brand-logo" color="white" height={24} />
-        <span style={{display: 'inline'}}>The Antitwink™'s Shortlinks!</span>
+        <span style={{ display: 'inline' }}>The Antitwink™'s Shortlinks!</span>
       </NavbarBrand>
 
       <NavbarToggler onClick={toggleCollapse}>

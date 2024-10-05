@@ -2,10 +2,10 @@ import type { FC } from 'react';
 import { useEffect } from 'react';
 
 interface WithoutSelectedServerProps {
-  resetSelectedServer: Function;
+  resetSelectedServer: (...arg0: any[]) => any;
 }
 
-export function withoutSelectedServer<T = {}>(WrappedComponent: FC<WithoutSelectedServerProps & T>) {
+export function withoutSelectedServer<T = any>(WrappedComponent: FC<WithoutSelectedServerProps & T>) {
   return (props: WithoutSelectedServerProps & T) => {
     const { resetSelectedServer } = props;
     useEffect(() => {

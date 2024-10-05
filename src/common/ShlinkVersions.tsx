@@ -2,8 +2,9 @@ import { ExternalLink } from 'react-external-link';
 import type { SelectedServer } from '../servers/data';
 import { isReachableServer } from '../servers/data';
 import { versionToPrintable, versionToSemVer } from '../utils/helpers/version';
+import { VERSION } from './ShlinkVersion';
 
-const SHLINK_WEB_CLIENT_VERSION = '%_VERSION_%';
+const SHLINK_WEB_CLIENT_VERSION = VERSION || 'latest';
 const normalizeVersion = (version: string) => versionToPrintable(versionToSemVer(version));
 
 export interface ShlinkVersionsProps {

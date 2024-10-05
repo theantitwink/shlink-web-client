@@ -14,3 +14,4 @@ docker-compose.override.yml
 home
 public/servers.json*
 public/idons/old/
+public/idons/old2/

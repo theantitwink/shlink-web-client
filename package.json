@@ -5,7 +5,8 @@
   "repository": "https://github.com/iamtheantitwink/shlink-web-client",
   "license": "MIT",
   "type": "module",
-  "version": "v0.0.2",
+  "version": "0.0.0-alpha.0.850",
+  "homepage": "https://my-short.link",
   "scripts": {
     "lint": "npm run lint:css && npm run lint:js",
     "lint:css": "stylelint src/*.scss src/**/*.scss",

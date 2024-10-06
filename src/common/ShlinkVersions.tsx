@@ -12,7 +12,7 @@ export interface ShlinkVersionsProps {
   clientVersion?: string;
 }
 
-const VersionLink = ({ _, version }: { project: 'shlink' | 'shlink-web-client'; version: string }) => (
+const VersionLink = ({ project, version }: { project: 'shlink' | 'shlink-web-client'; version: string }) => (
   <ExternalLink href={`${pack.repository}/releases/${version}`} className="text-muted">
     <b>{version}</b>
   </ExternalLink>

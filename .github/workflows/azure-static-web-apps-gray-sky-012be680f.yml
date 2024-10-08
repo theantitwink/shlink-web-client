@@ -38,7 +38,9 @@ jobs:
               run: npm install --force
     
             - name: Build
-              run: npm run build
+              run: npm run build:dist
+              env:
+                VERSION: ${{ steps.minver.outputs.version }}
     
             - name: Build And Deploy
               id: deploy

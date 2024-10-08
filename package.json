@@ -1,8 +1,8 @@
 {
-  "name": "shlink-web-client",
+  "name": "@theantitwink/shlink-web-client",
   "description": "A React-based progressive web application for shlink",
   "private": false,
-  "repository": "https://github.com/iamtheantitwink/shlink-web-client",
+  "repository": "https://github.com/theantitwink/shlink-web-client",
   "license": "MIT",
   "type": "module",
   "homepage": "",

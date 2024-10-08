@@ -5,6 +5,8 @@ on:
     branches:
       - main
       - develop
+  deployment:
+  workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}
@@ -24,11 +26,6 @@ jobs:
               id: minver
               uses: theantitwink/minver@main
 
-            - name: Update package version
-              uses: theantitwink/update-package-version@main
-              with:
-                version: ${{ steps.minver.outputs.version }}
-
             - name: Setup Node.js
               uses: actions/setup-node@v2
               with:
@@ -38,7 +35,14 @@ jobs:
               run: npm install --force
     
             - name: Build
-              run: npm run build
+              run: npm run build:dist
+              env:
+                VERSION: ${{ steps.minver.outputs.version }}
+
+            # - name: Update package version
+            #   uses: theantitwink/update-package-version@main
+            #   with:
+            #     version: ${{ steps.minver.outputs.version }}
     
             - name: Build And Deploy
               id: deploy

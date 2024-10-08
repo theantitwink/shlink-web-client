@@ -4,8 +4,9 @@ import type { SelectedServer } from '../servers/data';
 import { isReachableServer } from '../servers/data';
 import { versionToPrintable, versionToSemVer } from '../utils/helpers/version';
 import pack from './../../package.json';
+import { VERSION as version } from './ShlinkVersion';
 
-const SHLINK_WEB_CLIENT_VERSION = pack.version || 'latest';
+const SHLINK_WEB_CLIENT_VERSION = version || 'latest';
 const normalizeVersion = (version: string) => versionToPrintable(versionToSemVer(version));
 
 export interface ShlinkVersionsProps {
@@ -14,7 +15,7 @@ export interface ShlinkVersionsProps {
 }
 
 const VersionLink = ({ project, version }: { project: 'shlink' | 'shlink-web-client'; version: string }) => (
-  <ExternalLink href={`${pack.repository}/releases/${version}`} className="text-muted">
+  <ExternalLink href={`${pack.repository}/releases/tags/${version}`} className="text-muted">
     <b>{version}</b>
   </ExternalLink>
 );

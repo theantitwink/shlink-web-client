@@ -1,9 +1,11 @@
+/* eslint-disable no-undef */
+import process from 'process';
 // Do this as the first thing so that any code reading it knows the right env.
 process.env.BABEL_ENV = 'production';
 process.env.NODE_ENV = 'production';
 
-import chalk from 'chalk';
 import AdmZip from 'adm-zip';
+import chalk from 'chalk';
 import fs from 'fs';
 
 function zipDist(version) {
@@ -14,7 +16,7 @@ function zipDist(version) {
 
   try {
     if (fs.existsSync(versionFileName)) {
-      fs.unlink(versionFileName);
+      fs.unlinkSync(versionFileName);
     }
 
     zip.addLocalFolder('./build', `shlink-web-client_${version}_dist`);

@@ -1,11 +1,12 @@
 import type { ManifestOptions } from 'vite-plugin-pwa';
 
-export const manifest: Partial<ManifestOptions> = {
+export const manifest: Partial<ManifestOptions> & { version: string } = {
   short_name: 'Antitwink™\'s Shlink',
   name: 'The Antitwink™\'s Shortlinks!',
   start_url: '/',
   display: 'standalone',
   theme_color: '#4696e5',
+  version: '0.0.5-alpha',
   background_color: '#4696e5',
   icons: [
     {

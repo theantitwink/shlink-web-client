@@ -1,4 +1,5 @@
 import fs from 'fs';
+import process from 'process';
 
 function replaceVersionPlaceholder(version) {
   const staticJsFilesPath = './build/assets';

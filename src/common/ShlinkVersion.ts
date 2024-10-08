@@ -1,1 +1,4 @@
-export const VERSION = process.env.REACT_APP_VERSION;
+/* eslint-disable no-undef */
+/* eslint-disable @typescript-eslint/no-require-imports */
+
+export const VERSION = '%_VERSION_%';

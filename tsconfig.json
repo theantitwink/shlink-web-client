@@ -27,6 +27,7 @@
   "include": [
     "*.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "package.json"
   ]
 }

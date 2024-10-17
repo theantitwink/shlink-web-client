@@ -8,8 +8,6 @@
     "module": "esnext",
     "moduleResolution": "bundler",
     "noEmit": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
     "preserveConstEnums": true,
     "removeComments": false,
     "skipLibCheck": true,
@@ -29,5 +27,5 @@
     "**/*.ts",
     "**/*.tsx",
     "package.json"
-  ]
+, "src/common/ShlinkVersion.js"  ]
 }

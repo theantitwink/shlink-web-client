@@ -3,5 +3,8 @@
     "globalHeaders": {
         "access-control-allow-origin": "*",
         "access-control-allow-methods": "*"
+    },
+    "navigationFallback": {
+        "rewrite": "/index.html"
     }
 }
